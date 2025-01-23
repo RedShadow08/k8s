@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: ports
+  annotations:
+    description: Opened PORT
+spec:
+  containers:
+    - name: c00
+      image: httpd
+      env:
+        - name: NAME
+          value: krow
+      ports:
+        - containerPort: 80

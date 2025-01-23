@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test
+  annotations:
+     description: check what i remember
+  labels:
+      env: test
+      class: learn
+spec:
+   containers:
+      - name: c1
+        image: ubuntu
+        command: ["/bin/bash", "-c", "tail -f /dev/null"]
+        env:
+          - name: NAME
+            value: shadow
+      - name: c2
+        image: httpd
+        ports:
+          - containerPort: 80

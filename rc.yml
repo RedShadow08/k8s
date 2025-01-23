@@ -1,0 +1,19 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: myreplica
+spec:
+  replicas: 2
+  selector:
+     myname: krow
+  template:
+     metadata:
+       name: isekai
+       labels:
+         myname: krow
+     spec:
+       containers:
+         - name: c1
+           image: ubuntu
+           command: ["/bin/bash","-c","while true; do echo dark;sleep 5;done"]
+

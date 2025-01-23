@@ -1,0 +1,21 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: replicaset
+spec:
+  replicas: 2
+  selector:
+     matchExpressions:
+             - {key: myname, operator: In, values: [krow,shadow]}
+             - {key: myname, operator: NotIn, values: [production]}
+  template:
+     metadata:
+       name: isekai
+       labels:
+         myname: krow
+     spec:
+       containers:
+         - name: c1
+           image: ubuntu
+           command: ["/bin/bash","-c","while true; do echo dark;sleep 5;done"]
+
