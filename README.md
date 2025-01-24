@@ -1,4 +1,5 @@
-**KUBERNETES MANIFEST FILES**\n
+**KUBERNETES MANIFEST FILES**
+
 The files contain the example of manifest files for different objects.
 
 Kubernetes Objects 
