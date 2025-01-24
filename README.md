@@ -6,3 +6,4 @@ Kubernetes Objects
   1. Pod
   2. ReplicaController
   3. ReplicaSet
+  4. Deployment

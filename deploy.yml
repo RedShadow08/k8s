@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mydeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: deployment
+  template:
+     metadata:
+       name: pod1
+       labels:
+         name: deployment
+     spec:
+       containers:
+          - name: c1
+            image: ubuntu
+            command: ["/bin/bash","-c","while true; do echo surpass the limit; sleep 5; done"]
