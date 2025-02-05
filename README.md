@@ -8,3 +8,11 @@ Kubernetes Objects
   3. ReplicaSet
   4. Deployment
   5. Services
+       - clusterIP
+       - NodePort
+       - LoadBalancer
+
+Volumes:
+  1. EmptyDir
+  2. hostpath
+  3. Persistent Volume (persistent volume claim)
