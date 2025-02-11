@@ -1,19 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: mydeployment
+  name: mydeploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      name: deployment
+      name: deploy
   template:
      metadata:
        name: pod1
        labels:
-         name: deployment
+         name: deploy
      spec:
        containers:
           - name: c1
-            image: ubuntu
-            command: ["/bin/bash","-c","while true; do echo surpass the limit; sleep 5; done"]
+            image: nginx
+            ports:
+              - containerPort: 80
