@@ -16,3 +16,8 @@ Volumes:
   1. EmptyDir
   2. hostpath
   3. Persistent Volume (persistent volume claim)
+
+
+Secrets & ConfigMap
+ >> kubectl create cm <name> --from-file=<filename>
+ >> kubectl create secrets <name> --from-file=<file1> --from<file2>
